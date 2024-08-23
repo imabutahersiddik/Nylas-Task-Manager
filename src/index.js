@@ -3,7 +3,8 @@ const express = require('express');
 const session = require('express-session');
 const passport = require('passport');
 const { initializeNylas } = require('./api/nylas');
-const { handleTaskCreation } = require('./services/taskService');
+const taskRoutes = require('./routes/taskRoutes');
+const errorHandler = require('./middlewares/errorHandler');
 
 const app = express();
 app.use(express.json());
@@ -14,7 +15,10 @@ app.use(passport.session());
 initializeNylas();
 
 // Routes
-app.post('/create-tasks', handleTaskCreation);
+app.use('/api', taskRoutes);
+
+// Error handling middleware
+app.use(errorHandler);
 
 // Start server
 const PORT = process.env.PORT || 3000;

@@ -1,4 +1,5 @@
-const { createCalendarEvent } = require('../api/calendarService');
+const axios = require('axios');
+const { createCalendarEvent } = require('./calendarService');
 
 async function createTaskInTool(actionItems) {
     // Iterate over each action item
