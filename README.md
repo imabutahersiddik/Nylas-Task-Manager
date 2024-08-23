@@ -2,52 +2,6 @@
 
 A task management assistant that uses Nylas APIs and AI to extract action items from meeting notes and create tasks automatically.
 
-### Usage Scenarios
-
-#### 1. **Automated Task Creation from Meeting Notes**
-   - Users can input their meeting notes into the app, and it will automatically extract action items and create tasks. This saves time and ensures that important tasks are not overlooked.
-
-#### 2. **Integration with Calendar Services**
-   - The app can create calendar events in Google Calendar or other integrated services for each task created. This helps users keep track of deadlines and manage their schedules effectively.
-
-#### 3. **Real-time Notifications**
-   - Users receive instant notifications in Slack and Microsoft Teams when new tasks are created. This ensures that team members are always informed about their responsibilities and deadlines.
-
-#### 4. **Task Prioritization**
-   - Users can prioritize tasks based on urgency or importance. The app can be extended to include features for setting due dates and reminders, helping users focus on what matters most.
-
-#### 5. **Seamless Collaboration**
-   - Team members can collaborate by sharing meeting notes and tasks. The app can facilitate discussions around specific tasks, ensuring everyone is on the same page.
-
-#### 6. **AI-Powered Insights**
-   - The app leverages AI to analyze meeting notes and suggest actionable items. This feature can help users identify key points and improve productivity by focusing on critical tasks.
-
-#### 7. **Customizable Task Management**
-   - Users can customize task attributes such as titles, descriptions, and due dates. This flexibility allows teams to adapt the app to their specific workflows and requirements.
-
-#### 8. **Centralized Task Overview**
-   - Users can view all their tasks in one place, making it easier to manage workloads and track progress. This centralization helps in maintaining organization and efficiency.
-
-#### 9. **Integration with Existing Tools**
-   - The app can integrate with other task management tools, allowing users to sync tasks across platforms. This ensures that users can work with their preferred tools without losing functionality.
-
-#### 10. **User Authentication and Security**
-   - The app includes user authentication features to ensure that sensitive information, such as meeting notes and tasks, is securely managed. This is crucial for maintaining privacy and data integrity.
-
-### Example Usage
-
-To use the Nylas Task Manager app, follow these steps:
-
-1. **Start the Application**: Run the command `npm start` to launch the server.
-2. **Send Meeting Notes**: Use a tool like Postman to send a POST request to `http://localhost:3000/create-tasks` with a JSON body containing your meeting notes:
-   ```json
-   {
-       "meetingNotes": "Discuss project timeline and assign tasks to team members."
-   }
-   ```
-3. **Receive Notifications**: Check your Slack or Teams channel for notifications about the newly created tasks.
-4. **Review Calendar Events**: Open your calendar to see the scheduled events corresponding to your tasks.
-
 ## Getting Started
 
 ### Prerequisites
@@ -83,6 +37,50 @@ npm start
 ### API Endpoint
 
 - **POST /create-tasks**: Accepts meeting notes and creates tasks based on extracted action items.
+
+## Final Steps
+
+1. **Install Dependencies**: Run `npm install` to install all required packages.
+2. **Run the Application**: Use `npm start` to start your server.
+3. **Test the API**: Use a tool like Postman to send a POST request to `http://localhost:3000/create-tasks` with a JSON body containing `meetingNotes`.
+
+```json
+{
+    "meetingNotes": "Discuss project timeline and assign tasks to team members."
+}
+```
+
+### Usage Scenarios
+
+#### 1. **Automated Task Creation from Meeting Notes**
+   - Users can input their meeting notes into the app, and it will automatically extract action items and create tasks. This saves time and ensures that important tasks are not overlooked.
+
+#### 2. **Integration with Calendar Services**
+   - The app can create calendar events in Google Calendar or other integrated services for each task created. This helps users keep track of deadlines and manage their schedules effectively.
+
+#### 3. **Real-time Notifications**
+   - Users receive instant notifications in Slack and Microsoft Teams when new tasks are created. This ensures that team members are always informed about their responsibilities and deadlines.
+
+#### 4. **Task Prioritization**
+   - Users can prioritize tasks based on urgency or importance. The app can be extended to include features for setting due dates and reminders, helping users focus on what matters most.
+
+#### 5. **Seamless Collaboration**
+   - Team members can collaborate by sharing meeting notes and tasks. The app can facilitate discussions around specific tasks, ensuring everyone is on the same page.
+
+#### 6. **AI-Powered Insights**
+   - The app leverages AI to analyze meeting notes and suggest actionable items. This feature can help users identify key points and improve productivity by focusing on critical tasks.
+
+#### 7. **Customizable Task Management**
+   - Users can customize task attributes such as titles, descriptions, and due dates. This flexibility allows teams to adapt the app to their specific workflows and requirements.
+
+#### 8. **Centralized Task Overview**
+   - Users can view all their tasks in one place, making it easier to manage workloads and track progress. This centralization helps in maintaining organization and efficiency.
+
+#### 9. **Integration with Existing Tools**
+   - The app can integrate with other task management tools, allowing users to sync tasks across platforms. This ensures that users can work with their preferred tools without losing functionality.
+
+#### 10. **User Authentication and Security**
+   - The app includes user authentication features to ensure that sensitive information, such as meeting notes and tasks, is securely managed. This is crucial for maintaining privacy and data integrity.
 
 ### Example POST Requests
 
@@ -163,17 +161,19 @@ curl -X POST http://localhost:3000/create-tasks \
 }
 ```
 
-## Final Steps
+### Example Usage
 
-1. **Install Dependencies**: Run `npm install` to install all required packages.
-2. **Run the Application**: Use `npm start` to start your server.
-3. **Test the API**: Use a tool like Postman to send a POST request to `http://localhost:3000/create-tasks` with a JSON body containing `meetingNotes`.
+To use the Nylas Task Manager app, follow these steps:
 
-```json
-{
-    "meetingNotes": "Discuss project timeline and assign tasks to team members."
-}
-```
+1. **Start the Application**: Run the command `npm start` to launch the server.
+2. **Send Meeting Notes**: Use a tool like Postman to send a POST request to `http://localhost:3000/create-tasks` with a JSON body containing your meeting notes:
+   ```json
+   {
+       "meetingNotes": "Discuss project timeline and assign tasks to team members."
+   }
+   ```
+3. **Receive Notifications**: Check your Slack or Teams channel for notifications about the newly created tasks.
+4. **Review Calendar Events**: Open your calendar to see the scheduled events corresponding to your tasks.
 
 ### License
 
