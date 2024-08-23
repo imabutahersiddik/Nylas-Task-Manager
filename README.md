@@ -172,7 +172,8 @@ curl -X POST http://localhost:3000/create-tasks \
 ```json
 {
     "meetingNotes": "Discuss project timeline and assign tasks to team members."
-}```
+}
+```
 
 ### License
 
